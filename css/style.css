@@ -1,0 +1,527 @@
+/* =================================
+  Base Element Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+    color: #3a3a3a;
+    padding-top: 84px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+p {
+    font-size: .95em;
+    margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+    color: #F55255;
+}
+
+h2,
+h3 {
+    margin-top: 0;
+}
+
+.news h2 {
+  margin: 2em 0 1em 0;
+}
+  
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+figure {
+    margin: 0;
+    line-height: 0;
+    position: relative;
+}
+
+figcaption {
+    font-size: .9em;
+    line-height: 1.5;
+    color: #fff;
+    padding: 1em;
+    background: rgba(86, 70, 71, 0.7);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+/* ---- Navigation ---- */
+
+
+.name {
+    margin: 0;
+    /* fixes vertical collapse */
+    
+    font-size: 1.25em;
+    float: left;
+}
+
+.main-header {
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+    z-index: 1000;
+}
+
+.main-nav {
+    float: right;
+}
+
+.name,
+.main-nav li {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+.main-nav li {
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0 2px;
+}
+
+.name a,
+.main-nav a {
+    text-align: center;
+}
+
+.main-nav a {
+    font-size: .95em;
+    color: #89BABE;
+    text-transform: uppercase;
+}
+
+.main-nav a:hover {
+    color: #093a58;
+}
+/* ---- Create Recipe Form ---- */
+
+form fieldset {
+    border: none;
+}
+
+.form .cp-title {
+    margin: 2em 0 1em 0;
+    color: #4f4f4f;
+    font-size: 1.5em;
+    font-weight: 700
+}
+
+.form .cp-text {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.3em;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+}
+
+.form .wrapper-left {
+    float: left;
+}
+
+.form .wrapper-right {
+    float: right;
+    width: 35%;
+}
+
+form .wrapper-right input[type="text"]:nth-child(2),
+form .wrapper-right input[type="text"]:nth-child(4) {
+    width: 44%;
+}
+
+.form label {
+    margin: 0px 0 5px;
+    min-height: 1em;
+    display: block;
+    line-height: 2em;
+    font-size: 1.15em
+}
+
+.form #ingredient {
+    color: #b3b3b3;
+    padding-left: 1px;
+}
+
+.anchors #anchor2 {
+    margin-left: 20px;
+}
+
+.anchors {
+    padding-bottom: 2%;
+}
+
+#anchor1,
+#anchor2 {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.form input,
+.form textarea {
+    margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+    display: block;
+}
+
+#recipeForm > fieldset > div.wrapper-left > select {
+    padding: 3px;
+    width: 35%;
+    background-color: initial;
+}
+
+
+#recipeForm .select-boxes select {
+    padding: 2px 0px;
+    background-color: initial;
+    color: #b3b3b3;
+}
+
+form select,
+form input,
+form textarea {
+    width: 100%;
+}
+input#image {
+    max-width: 50px;
+    display: block;
+}
+.upload-section input[type=submit] {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.3em;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+    }
+.form-l {
+    float: left;
+    width: 45%;
+    margin-bottom: 10px;
+}
+.form-r {
+    float: right;
+    width: 48%;
+    margin-bottom: 10px;
+}
+#file {
+	display: none;
+}
+
+.upload-section img {
+cursor: pointer;
+}
+.form img {max-width: 50px;width: 100%;}
+
+form input[type="submit"], button {
+    margin-top: 2em;
+    width: 33%;
+    text-align: center;
+    border: 0;
+    background: #F55255;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 1em;
+    padding: 14px 0 16px;
+}
+/* ---- Layout Containers ---- */
+
+.column-wrapper {
+    padding: 1.25em 0;
+    max-width: 1150px;
+    width: 80%;
+    margin: 0 auto;
+    flex: 1 0 auto;
+}
+
+.banner {
+    background-color: white;
+    background-image: radial-gradient(#eee3df 9px, transparent 10px), repeating-radial-gradient(#eee3df 0, #eee3df 4px, transparent 5px, transparent 20px, #eee3df 21px, #eee3df 25px, transparent 26px, transparent 50px);
+    background-size: 30px 30px, 90px 90px;
+    background-position: 0 0;
+}
+.banner {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAALUlEQVQoU2NkIBIwEqmOAUXh/////zMyMmLVzPju8f3/xJhKA4XEWAtSQ7SvAZ3/DxZEttN6AAAAAElFTkSuQmCC) repeat;
+}
+.banner .inner-wrapper {
+    margin: 0 auto;
+    padding: 2.25em 0;
+    /*fixes vertical collapse */
+    
+    width: 70%;
+}
+.main-footer {
+    background: #EEE3DF;
+    padding: 2.25em 0;
+    flex-shrink: 0;
+    margin-top: 30px;
+}
+.col {
+    float: left;
+    padding: 0 20px;
+    margin: 0 0px;
+}
+.primary {
+    width: 40%;
+}
+.secondary,
+.tertiary {
+    width: 30%;
+}
+/* ---- Page Elements ---- */
+
+h1.headline,
+span.tagline,
+.main-footer span {
+    text-align: center;
+    display: block;
+    color: #564647;
+}
+.logo {
+    width: 190px;
+    display: block;
+    margin-top: .67em;
+}
+.icon-location {
+    width: 35px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+/* Smaller than 1350px */
+
+@media only screen and (max-width: 1350px) {
+    .form .wrapper-right {
+        width: 100%;
+    }
+}
+/* Smaller than 960px */
+
+@media only screen and (max-width: 960px) {
+    .primary,
+    .secondary {
+        width: 50%;
+    }
+    .tertiary {
+        width: 100%;
+    }
+}
+/* Smaller than 768px */
+
+@media only screen and (max-width: 768px) {}
+
+
+/* Smaller than 612px */
+
+@media only screen and (max-width: 612px) {
+    .name,
+    .name a,
+    .main-nav,
+    .main-nav li,
+    .main-nav a {
+        display: block;
+        float: none;
+    }
+    .col {
+        width: 100%;
+    }
+    .banner,
+    .form {
+        margin-top: 8em;
+    }
+    /* ---- Form ---- */
+    
+    .form-l,
+    .form-r {
+        display: block;
+        width: 100%;
+    }
+    form input[type="submit"] {
+        width: 62%;
+    }
+    
+    .form label {
+    	font-size: 1em
+    }
+    
+    .material-icons.md-36 { font-size: 24px!important; }
+}
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/* ---- Recipe View ---- */
+
+.single_recipe {
+	margin-top: 3em;
+}
+
+.single_recipe .item {
+	margin-bottom: 1.5em;
+}
+
+.single_recipe .description {
+	margin-bottom: 1.5em;
+}
+
+.single_recipe .ingredients {
+	margin-bottom: 1.5em;
+}
+
+.single_recipe label {
+    margin: 0px 0 5px;
+    min-height: 1em;
+    display: block;
+    line-height: 2em;
+    font-size: .95em;
+    color: #89BABE;
+    text-transform: uppercase;
+} 
+ 
+.single_recipe .instructions {
+   margin-bottom: 1.5em;
+}
+
+.helper_icons > div {
+    margin-right: .5em;
+    display: inline-block;
+}
+
+
+/* ---- Recipes View ---- */
+
+.recipes {
+	margin: 2em 1px;
+	overflow: hidden;
+}
+
+.recipes .recipe {
+	margin: 0.625em 0.6% 0;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	position: relative;
+	width: 23%;
+	padding: 10px;
+	border: solid 1px #eee3df;
+	border-radius: 4px;
+	float: left;
+	min-height: 211px;
+}
+
+.recipes .description {
+	margin: auto 0 63px 0;
+}
+
+.recipes .recipe_view {
+	position: absolute;
+	bottom: 10px;
+	padding: 1px;
+}
+
+
+@media only screen and (max-width : 1350px) {
+    .recipes .recipe {
+    	margin-left: 1%;
+        width: 30%;
+    }
+
+}
+
+
+@media only screen and (max-width : 814px) {
+    .recipes .recipe {
+    	margin-left: 3%;
+    	margin-bottom: 1%;
+        width: 44%;
+    }
+}
+
+@media only screen and (max-width : 548px) {
+    .recipes .recipe {
+        margin-bottom: 1.25em;
+        width: 95%;
+        float: none;
+        display: block;
+        box-sizing: border-box;
+        overflow: none;
+    }
+
+}
+
+/* ---- Create Recipes View ---- */
+
+.ingred_input_wrapper {
+	overflow: hidden;
+}
+
+#ingredient_col1, #ingredient_icing_col1 {
+	float: left;
+	width: 48.9%;
+}
+
+#ingredient_col2, #ingredient_icing_col2 {
+	float: right;
+	width: 48.9%;
+}
+
+@media only screen and (max-width: 500px) {
+	#ingredient_col1, #ingredient_icing_col1, #ingredient_col2, #ingredient_icing_col2 {
+	        width: 100%;
+	    }
+}
+	
+	
+/* ---- Form Validation Rules ---- */
+
+.form_validation_wrapper p {
+	color: #f44336;
+	font-weight: 700;
+}
+
+/* ---- Material Icon Rules ---- */
+
+.material-icons {cursor: pointer;}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.material-icons.red { color: #F55255; }
