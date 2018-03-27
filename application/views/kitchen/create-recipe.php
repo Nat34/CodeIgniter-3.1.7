@@ -74,7 +74,7 @@
     ?>
     
     <label for="icing_instructions">Icing Instructions (Optional)</label>
-    <?php echo form_textarea($textdata[1], set_value($textdata[2]['name']), TRUE); ?><br />
+    <?php echo form_textarea($textdata[2], set_value($textdata[2]['name']), TRUE); ?><br />
 
     <input type="submit" name="submit" value="Create Recipe" />
 
