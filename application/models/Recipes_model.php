@@ -25,11 +25,12 @@ class Recipes_model extends CI_Model {
 	    $slug = url_title($this->input->post('title'), 'dash', TRUE);
 	    
 	    $recipe_data = array(
-	    	'source' => $this->input->post('source', TRUE),
-	        'title' => $this->input->post('title', TRUE),
-	        'slug' => $slug,
-	        'description' => $this->input->post('description', TRUE),
-	        'instructions' => $this->input->post('instructions', TRUE)
+	    	'source'       => $this->input->post('source', TRUE),
+	        'title'        => $this->input->post('title', TRUE),
+	        'slug'         => $slug,
+	        'description'  => $this->input->post('description', TRUE),
+	        'instructions' => $this->input->post('instructions', TRUE),
+	        'total_time'   => $this->input->post('total_time', TRUE)
 	    );
 	
 	    $this->db->insert('recipes', $recipe_data);

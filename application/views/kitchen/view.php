@@ -4,7 +4,12 @@
 			echo '<h2>'.$recipes_item['title'].'</h2>';
 			echo '<div class="item">by '.$recipes_item['source'].'</div>';
 			echo '<div class="description">'.$recipes_item['description'].'</div>';
-			
+
+			if(!empty($recipes_item['total_time'])) {
+				echo '<label>Total Time</label>';
+				echo '<div class="total_time">'.$recipes_item['total_time'].'</div>';
+			}
+
 			if(!empty($recipes_item['ingredients'])) {
 				echo '<label>Ingredients</label>';
 				echo '<div class="ingredients">';

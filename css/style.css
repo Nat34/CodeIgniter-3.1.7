@@ -231,7 +231,7 @@ input#image {
     margin-bottom: 10px;
 }
 #file {
-	display: none;
+    display: none;
 }
 
 .upload-section img {
@@ -251,6 +251,12 @@ form input[type="submit"], button {
     font-size: 1em;
     padding: 14px 0 16px;
 }
+
+.form input[name="total_time"] {
+    width: 10%;
+}
+
+
 /* ---- Layout Containers ---- */
 
 .column-wrapper {
@@ -336,6 +342,10 @@ span.tagline,
     .tertiary {
         width: 100%;
     }
+
+    .form input[name="total_time"] {
+        width: 25%;
+    }
 }
 /* Smaller than 768px */
 
@@ -372,7 +382,7 @@ span.tagline,
     }
     
     .form label {
-    	font-size: 1em
+        font-size: 1em
     }
     
     .material-icons.md-36 { font-size: 24px!important; }
@@ -388,19 +398,15 @@ span.tagline,
 /* ---- Recipe View ---- */
 
 .single_recipe {
-	margin-top: 3em;
+    margin-top: 3em;
 }
 
-.single_recipe .item {
-	margin-bottom: 1.5em;
-}
-
-.single_recipe .description {
-	margin-bottom: 1.5em;
-}
-
-.single_recipe .ingredients {
-	margin-bottom: 1.5em;
+.single_recipe .item,
+.single_recipe .description,
+.single_recipe .total_time,
+.single_recipe .ingredients,
+.single_recipe .instructions {
+    margin-bottom: 1.5em;
 }
 
 .single_recipe label {
@@ -412,10 +418,6 @@ span.tagline,
     color: #89BABE;
     text-transform: uppercase;
 } 
- 
-.single_recipe .instructions {
-   margin-bottom: 1.5em;
-}
 
 .helper_icons > div {
     margin-right: .5em;
@@ -426,39 +428,39 @@ span.tagline,
 /* ---- Recipes View ---- */
 
 .recipes {
-	margin: 2em 1px;
-	overflow: hidden;
+    margin: 2em 1px;
+    overflow: hidden;
 }
 
 .recipes .recipe {
-	margin: 0.625em 0.6% 0;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: column;
-	flex-direction: column;
-	position: relative;
-	width: 23%;
-	padding: 10px;
-	border: solid 1px #eee3df;
-	border-radius: 4px;
-	float: left;
-	min-height: 211px;
+    margin: 0.625em 0.6% 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    width: 23%;
+    padding: 10px;
+    border: solid 1px #eee3df;
+    border-radius: 4px;
+    float: left;
+    min-height: 211px;
 }
 
 .recipes .description {
-	margin: auto 0 63px 0;
+    margin: auto 0 63px 0;
 }
 
 .recipes .recipe_view {
-	position: absolute;
-	bottom: 10px;
-	padding: 1px;
+    position: absolute;
+    bottom: 10px;
+    padding: 1px;
 }
 
 
 @media only screen and (max-width : 1350px) {
     .recipes .recipe {
-    	margin-left: 1%;
+        margin-left: 1%;
         width: 30%;
     }
 
@@ -467,8 +469,8 @@ span.tagline,
 
 @media only screen and (max-width : 814px) {
     .recipes .recipe {
-    	margin-left: 3%;
-    	margin-bottom: 1%;
+        margin-left: 3%;
+        margin-bottom: 1%;
         width: 44%;
     }
 }
@@ -485,34 +487,71 @@ span.tagline,
 
 }
 
+/* ---- ToolTips---- */
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    color: #006080;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    background-color: rgba(97,97,97,.9);
+    color: #fff;
+    font-size: .775em;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 2px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-bottom {
+  top: 125%;
+  left: 50%;  
+  margin-left: -60px;
+}
+
+
+
 /* ---- Create Recipes View ---- */
 
 .ingred_input_wrapper {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 #ingredient_col1, #ingredient_icing_col1 {
-	float: left;
-	width: 48.9%;
+    float: left;
+    width: 48.9%;
 }
 
 #ingredient_col2, #ingredient_icing_col2 {
-	float: right;
-	width: 48.9%;
+    float: right;
+    width: 48.9%;
 }
 
 @media only screen and (max-width: 500px) {
-	#ingredient_col1, #ingredient_icing_col1, #ingredient_col2, #ingredient_icing_col2 {
-	        width: 100%;
-	    }
+    #ingredient_col1, #ingredient_icing_col1, #ingredient_col2, #ingredient_icing_col2 {
+            width: 100%;
+        }
 }
-	
-	
+    
+    
 /* ---- Form Validation Rules ---- */
 
 .form_validation_wrapper p {
-	color: #f44336;
-	font-weight: 700;
+    color: #f44336;
+    font-weight: 700;
 }
 
 /* ---- Material Icon Rules ---- */

@@ -32,6 +32,9 @@
     <label for="description">Description</label>
     <?php echo form_textarea($textdata[0], set_value($textdata[0]['name']), TRUE); ?><br />
     
+    <label for="total_time">Total Time</label>
+    <?php echo form_input('total_time', set_value('total_time'), TRUE); ?><br />
+
     <label for="ingredients">Ingredients</label>
 
     <?php
