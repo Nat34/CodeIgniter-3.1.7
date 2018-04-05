@@ -19,6 +19,8 @@ To build upon my knowledge of object-oriented programming within an application 
 
 ## resources:
 [CodeIgniter Docs](https://www.codeigniter.com/docs)
+
 [Treehouse](https://teamtreehouse.com)
+
 [PHP Objects, Patterns, and Practice](https://www.apress.com/us/book/9781484219959)
 
