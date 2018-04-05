@@ -23,7 +23,3 @@ To build upon my knowledge of object-oriented programming within an application 
 [Treehouse](https://teamtreehouse.com)
 
 [PHP Objects, Patterns, and Practice](https://www.apress.com/us/book/9781484219959)
-<<<<<<< HEAD
-=======
-
->>>>>>> 6242ab494286906ffae5136bc7abd0e8c527aeab
