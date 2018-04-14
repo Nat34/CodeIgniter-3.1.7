@@ -30,7 +30,8 @@ class Recipes_model extends CI_Model {
 	        'slug'         => $slug,
 	        'description'  => $this->input->post('description', TRUE),
 	        'instructions' => $this->input->post('instructions', TRUE),
-	        'total_time'   => $this->input->post('total_time', TRUE)
+	        'total_time'   => $this->input->post('total_time', TRUE),
+	        'servings_yield' => $this->input->post('servings_yield', TRUE)
 	    );
 	
 	    $this->db->insert('recipes', $recipe_data);

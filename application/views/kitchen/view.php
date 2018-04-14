@@ -9,6 +9,11 @@
 				echo '<label>Total Time</label>';
 				echo '<div class="total_time">'.$recipes_item['total_time'].'</div>';
 			}
+			
+			if(!empty($recipes_item['servings_yield'])) {
+				echo '<label>Servings/Yield</label>';
+				echo '<div class="servings_yield">'.$recipes_item['servings_yield'].'</div>';
+			}
 
 			if(!empty($recipes_item['ingredients'])) {
 				echo '<label>Ingredients</label>';
@@ -76,39 +81,3 @@
 		
 	</div>
 </div>
-
-<style>
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    color: #006080;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    position: absolute;
-    width: 120px;
-    background-color: rgba(97,97,97,.9);
-    color: #fff;
-    font-size: .775em;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 2px;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-.tooltip-bottom {
-  top: 125%;
-  left: 50%;  
-  margin-left: -60px;
-}
-
-</style>

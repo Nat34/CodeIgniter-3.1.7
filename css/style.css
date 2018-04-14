@@ -252,10 +252,10 @@ form input[type="submit"], button {
     padding: 14px 0 16px;
 }
 
-.form input[name="total_time"] {
-    width: 10%;
+.form input[name="total_time"],
+.form input[name="servings_yield"] {
+    width: 11%;
 }
-
 
 /* ---- Layout Containers ---- */
 
@@ -343,8 +343,9 @@ span.tagline,
         width: 100%;
     }
 
-    .form input[name="total_time"] {
-        width: 25%;
+    .form input[name="total_time"],
+    .form input[name="servings_yield"] {
+        width: 50%;
     }
 }
 /* Smaller than 768px */
@@ -404,6 +405,7 @@ span.tagline,
 .single_recipe .item,
 .single_recipe .description,
 .single_recipe .total_time,
+.single_recipe .servings_yield,
 .single_recipe .ingredients,
 .single_recipe .instructions {
     margin-bottom: 1.5em;
