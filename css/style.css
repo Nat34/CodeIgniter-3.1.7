@@ -407,7 +407,8 @@ span.tagline,
 .single_recipe .total_time,
 .single_recipe .servings_yield,
 .single_recipe .ingredients,
-.single_recipe .instructions {
+.single_recipe .instructions,
+.single_recipe .notes {
     margin-bottom: 1.5em;
 }
 
