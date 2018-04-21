@@ -5,6 +5,7 @@
     array('name' => 'description', 'rows' => '5', 'cols'=> '10'),
     array('name' => 'instructions', 'rows' => '5', 'cols'=> '10'),
     array('name' => 'icing_instructions', 'rows' => '5', 'cols'=> '10'),
+    array('name' => 'notes', 'rows' => '5', 'cols'=> '10'),
     );
 ?>
 
@@ -81,6 +82,9 @@
     
     <label for="icing_instructions">Icing Instructions (Optional)</label>
     <?php echo form_textarea($textdata[2], set_value($textdata[2]['name']), TRUE); ?><br />
+    
+    <label for="notes">Baker's Notes (Optional)</label>
+    <?php echo form_textarea($textdata[3], set_value($textdata[3]['name']), TRUE); ?><br />
 
     <input type="submit" name="submit" value="Create Recipe" />
 
