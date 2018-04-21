@@ -23,13 +23,14 @@ class Recipes_model extends CI_Model {
 	    $slug = url_title($this->input->post('title'), 'dash', TRUE);
 
 	    $recipe_data = array(
-	    	'source'       => $this->input->post('source', TRUE),
-	        'title'        => $this->input->post('title', TRUE),
-	        'slug'         => $slug,
-	        'description'  => $this->input->post('description', TRUE),
-	        'instructions' => $this->input->post('instructions', TRUE),
-	        'total_time'   => $this->input->post('total_time', TRUE),
-	        'servings_yield' => $this->input->post('servings_yield', TRUE)
+	    	  'source'         => $this->input->post('source', TRUE),
+	        'title'          => $this->input->post('title', TRUE),
+	        'slug'           => $slug,
+	        'description'    => $this->input->post('description', TRUE),
+	        'instructions'   => $this->input->post('instructions', TRUE),
+	        'total_time'     => $this->input->post('total_time', TRUE),
+	        'servings_yield' => $this->input->post('servings_yield', TRUE),
+          'notes'          => $this->input->post('notes', TRUE),
 	    );
 	
 	    $this->db->insert('recipes', $recipe_data);
