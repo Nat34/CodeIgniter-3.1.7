@@ -9,7 +9,7 @@
 				echo '<label>Total Time</label>';
 				echo '<div class="total_time">'.$recipes_item['total_time'].'</div>';
 			}
-			
+
 			if(!empty($recipes_item['servings_yield'])) {
 				echo '<label>Servings/Yield</label>';
 				echo '<div class="servings_yield">'.$recipes_item['servings_yield'].'</div>';
@@ -23,7 +23,7 @@
 				}
 				echo '</div>';
 			}
-			
+
 			$instructions = explode(".", $recipes_item['instructions']);
 
 			echo '<label>Instructions</label>';
@@ -44,9 +44,9 @@
 			}
 
 			if (!empty($recipes_item['instructions_icing'][0]['instructions'])) {
-				
+
 				$icing_instructions = explode(".", $recipes_item['instructions_icing'][0]['instructions']);
-				
+
 				echo '<label>Icing Instructions</label>';
 				echo '<div class="instructions">';
 				foreach ($icing_instructions as $instruction) {
@@ -57,15 +57,17 @@
 			}
 
 		?>
-		
+
 		<div class="helper_icons">
+      <?php /*
 			<div class="tooltip">
-				<a href="<?php echo site_url('recipes/remove/'.$recipes_item['slug']); ?>" 
+				<a href="<?php echo site_url('recipes/remove/'.$recipes_item['slug']); ?>"
 				    onclick="return confirm('Are you sure?');">
 				   	<i class="material-icons">delete</i>
 				</a>
 				<span class="tooltiptext tooltip-bottom">Remove Recipe</span>
 			</div>
+      */ ?>
 			<div class="tooltip">
 				<a href="javascript:window.print()">
 					<i class="material-icons">print</i>
@@ -74,10 +76,10 @@
 			</div>
 		</div>
 
-		
-				<!--
-		<div id="email"><a href="<?php echo site_url('recipes/email/'.$recipes_item['slug']); ?>"><i class="material-icons">email</i></a></div> 
-		-->
-		
+
+		<?php /*
+		<div id="email"><a href="<?php echo site_url('recipes/email/'.$recipes_item['slug']); ?>"><i class="material-icons">email</i></a></div>
+		*/ ?>
+
 	</div>
 </div>
