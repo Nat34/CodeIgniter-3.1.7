@@ -5,7 +5,7 @@
     array('name' => 'description', 'rows' => '5', 'cols'=> '10'),
     array('name' => 'instructions', 'rows' => '5', 'cols'=> '10'),
     array('name' => 'icing_instructions', 'rows' => '5', 'cols'=> '10'),
-    array('name' => 'notes', 'rows' => '5', 'cols'=> '10'),
+    array('name' => 'notes', 'rows' => '5', 'cols'=> '10')
     );
 ?>
 
