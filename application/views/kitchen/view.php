@@ -55,6 +55,11 @@
 				}
 				echo '</div>';
 			}
+      
+      if(!empty($recipes_item['notes'])) {
+        echo '<label>Baker\'s Note</label>';
+        echo '<div class="notes">'.$recipes_item['notes'].'</div>';
+      }
 
 		?>
 
