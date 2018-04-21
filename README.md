@@ -16,6 +16,8 @@ To build upon my knowledge of object-oriented programming within an application 
 - [x] HTML, CSS, Javascript, JQuery
 - [x] Git
 - [x] Sublime Text 3
+- [x] ATOM
+
 
 ## resources:
 [CodeIgniter Docs](https://www.codeigniter.com/docs)
