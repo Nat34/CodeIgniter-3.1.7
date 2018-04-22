@@ -269,10 +269,10 @@ form input[type="submit"], button {
 }
 
 .searchbox label {
-    color: rgba(255,255,255,.8);
+    color: #3a3a3a9c;
     position: absolute;
-    left: 10px;
-    top: 3px
+    left: 7px;
+    top: -3px;
 }
 
 .searchbox span {
