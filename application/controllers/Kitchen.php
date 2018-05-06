@@ -7,9 +7,9 @@ class Kitchen extends CI_Controller
     
     public function __construct()
     {
-	parent::__construct();
-	$this->load->model('recipes_model');
-	$this->load->helper('url_helper');
+    	parent::__construct();
+    	$this->load->model('recipes_model');
+    	$this->load->helper('url_helper');
     }
     
     public function index()
@@ -23,12 +23,12 @@ class Kitchen extends CI_Controller
     
     public function recipes($slug = NULL)
     {
-	$data['recipes'] = $this->recipes_model->get_recipes();
-	$data['title'] = "Recipes";
-	
-	$this->load->view('templates/header', $data);
-	$this->load->view('kitchen/recipes', $data);
-	$this->load->view('templates/footer', $data);
+    	$data['recipes'] = $this->recipes_model->get_recipes();
+    	$data['title'] = "Recipes";
+    	
+    	$this->load->view('templates/header', $data);
+    	$this->load->view('kitchen/recipes', $data);
+    	$this->load->view('templates/footer', $data);
     }
     
 	/*
@@ -37,20 +37,17 @@ class Kitchen extends CI_Controller
 	*/
     public function view($slug = NULL)
     {
-	
         $data['recipes_item'] = $this->recipes_model->get_recipes($slug);
 
-        if (empty($data['recipes_item']))
-        {
-                show_404();
+        if (empty($data['recipes_item'])) {
+            show_404();
         }
-        
-        if (isset($data['recipes_item']['id']))
-        {
-        	$source_id = $data['recipes_item']['id'];
-        	$data['recipes_item']['ingredients'] = $this->recipes_model->get_ingredients($source_id);
- 			$data['recipes_item']['ingredients_icing'] = $this->recipes_model->get_icingIngredients($source_id);
- 			$data['recipes_item']['instructions_icing'] = $this->recipes_model->getIcingInstructions($source_id);
+
+        if (isset($data['recipes_item']['id'])) {
+            $source_id = $data['recipes_item']['id'];
+            $data['recipes_item']['ingredients'] = $this->recipes_model->get_ingredients($source_id);
+            $data['recipes_item']['ingredients_icing'] = $this->recipes_model->get_icingIngredients($source_id);
+            $data['recipes_item']['instructions_icing'] = $this->recipes_model->getIcingInstructions($source_id);
         }
 
         $data['title'] = $data['recipes_item']['title'];
@@ -62,18 +59,16 @@ class Kitchen extends CI_Controller
     
     public function create()
     {
-    
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-		
-		$data['title'] = "Create A Recipe";
+        $this->load->helper('form');
+        $this->load->library('form_validation');
 
-		$this->form_validation->set_rules('title', 'Title', 'required');
-		$this->form_validation->set_rules('source', 'Source', 'required');
-		$this->form_validation->set_rules('description', 'Description', 'required');
-		$this->form_validation->set_rules('instructions', 'Instructions', 'required');
+        $data['title'] = "Create A Recipe";
 
-		
+        $this->form_validation->set_rules('title', 'Title', 'required');
+        $this->form_validation->set_rules('source', 'Source', 'required');
+        $this->form_validation->set_rules('description', 'Description', 'required');
+        $this->form_validation->set_rules('instructions', 'Instructions', 'required');
+
 		if ($this->form_validation->run() === FALSE) {
 			$this->load->view('templates/header', $data);
 			$this->load->view('kitchen/create-recipe');
@@ -93,33 +88,24 @@ class Kitchen extends CI_Controller
 	*/
     public function remove($slug = NULL)
     {
-	
         $this->recipes_model->remove_recipe($slug);
-
-	$this->load->view('templates/header');
-	$this->load->view('kitchen/success');
-	$this->load->view('templates/footer');
-
+        $this->load->view('templates/header');
+        $this->load->view('kitchen/success');
+        $this->load->view('templates/footer');
     }
     
     public function about()
     {
-    
-    	    $data['title'] = $this->title;
-	    
-	    $this->load->view('templates/header', $data);
-	    $this->load->view('kitchen/about-us', $data);
-
+        $data['title'] = $this->title;
+        $this->load->view('templates/header', $data);
+        $this->load->view('kitchen/about-us', $data);
     }
     
     public function gallery()
     {
-    
-    	    $data['title'] = $this->title;
-	    
-	    $this->load->view('templates/header', $data);
-	    $this->load->view('kitchen/gallery', $data);
-
+        $data['title'] = $this->title;
+        $this->load->view('templates/header', $data);
+        $this->load->view('kitchen/gallery', $data);
     }
 
 }
