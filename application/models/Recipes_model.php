@@ -23,14 +23,15 @@ class Recipes_model extends CI_Model {
 	    $slug = url_title($this->input->post('title'), 'dash', TRUE);
 
 	    $recipe_data = array(
-	    	  'source'         => $this->input->post('source', TRUE),
+	    	'source'         => $this->input->post('source', TRUE),
 	        'title'          => $this->input->post('title', TRUE),
 	        'slug'           => $slug,
 	        'description'    => $this->input->post('description', TRUE),
 	        'instructions'   => $this->input->post('instructions', TRUE),
 	        'total_time'     => $this->input->post('total_time', TRUE),
 	        'servings_yield' => $this->input->post('servings_yield', TRUE),
-          'notes'          => $this->input->post('notes', TRUE)
+            'notes'          => $this->input->post('notes', TRUE),
+            'category'       => $this->input->post('category', TRUE)
 	    );
 	
 	    $this->db->insert('recipes', $recipe_data);
@@ -160,45 +161,5 @@ class Recipes_model extends CI_Model {
 		$query = $this->db->query("SELECT `instructions` FROM `instructions_icing` WHERE `source` = '".$source_id."'");
 		return $query->result_array();
 	}
-/*
-	public function remove_recipe($slug)
-	{
-		$query = $this->db->query(
-			"SELECT `id`
-			FROM  `recipes`
-			WHERE  `slug` =  '".$slug."'"
-			);
-		$row = $query->row();
-
-		if (isset($row))
-		{
-		   $query = $this->db->query(
-			"DELETE
-			FROM  `recipes`
-			WHERE  `id` =  '".$row->id."'"
-			);
-
-		   $query = $this->db->query(
-			"DELETE
-			FROM  `ingredients`
-			WHERE  `source` =  '".$row->id."'"
-			);
-
-		   $query = $this->db->query(
-			"DELETE
-			FROM  `ingredients_icing`
-			WHERE  `source` =  '".$row->id."'"
-			);
-
-		   $query = $this->db->query(
-			"DELETE
-			FROM  `instructions_icing`
-			WHERE  `source` =  '".$row->id."'"
-			);
-
-		}
-
-	}
-  */
 
 }
