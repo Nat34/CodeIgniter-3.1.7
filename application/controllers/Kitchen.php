@@ -66,7 +66,7 @@ class Kitchen extends CI_Controller
 
         $this->form_validation->set_rules('title', 'Title', 'required');
         $this->form_validation->set_rules('source', 'Source', 'required');
-        $this->form_validation->set_rules('description', 'Description', 'required');
+        $this->form_validation->set_rules('description', 'Description', 'required|max_length[100]');
         $this->form_validation->set_rules('instructions', 'Instructions', 'required');
 
 		if ($this->form_validation->run() === FALSE) {
