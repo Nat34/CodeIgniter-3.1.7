@@ -85,7 +85,19 @@
     
     <label for="notes">Baker's Notes (Optional)</label>
     <?php echo form_textarea($textdata[3], set_value($textdata[3]['name']), TRUE); ?><br />
-
+    
+    <label for="category">Category (Optional)</label>
+    <?php $options = array(
+        'select'            => 'Select a category',
+        'cookies'           => 'Cookies',
+        'cakes'             => 'Cakes',
+        'chicken'           => 'Chicken',
+        'beef'              => 'Beef',
+        'seafood'           => 'Seafood',
+        'breakfast_items'   => 'Breakfast Items'
+    );
+    echo form_dropdown('category', $options); ?>
+    
     <input type="submit" name="submit" value="Create Recipe" />
 
 </form>
