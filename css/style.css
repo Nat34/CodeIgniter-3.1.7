@@ -357,7 +357,8 @@ span.tagline,
     }
 
     .form input[name="total_time"],
-    .form input[name="servings_yield"] {
+    .form input[name="servings_yield"],
+    .form select[name="category"] {
         width: 50%;
     }
 }
